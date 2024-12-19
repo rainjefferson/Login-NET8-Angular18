@@ -10,6 +10,7 @@ API feita em .NET 8.0, MVC, com os endpoints:
 * [POST] forgot-password
 
 Diretório `LoginAppAngular` (Frontend):
+
 Angular 18, com os components:
 
 * register
