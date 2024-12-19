@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "1TunDxicwTZHVtAX61dl1bGX2HKFPTtiI3rxnyXinlE=",
+  "Source": "LoginApp",
+  "BasePath": "_content/LoginApp",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

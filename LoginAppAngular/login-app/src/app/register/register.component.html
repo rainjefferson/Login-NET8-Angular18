@@ -1,0 +1,85 @@
+<div>
+  <main class="main-content  mt-0">
+    <section>
+      <div class="page-header min-vh-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
+              <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center" style="background-image: url('/assets/img/illustrations/illustration-signup.jpg'); background-size: cover;">
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
+              <div class="card card-plain">
+                <div class="card-header">
+                  <h4 class="font-weight-bolder">REGISTRAR</h4>
+                  <p class="mb-0">Digite seu e-mail e senha para se registrar</p>
+                </div>
+                <div class="card-body">
+                  <form role="form" (ngSubmit)="register()">
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Nome</label>
+                      <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name">					  
+                    </div>
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email">					  
+                    </div>
+                    <div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Senha</label>                     
+					  <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password">
+                    </div>
+					<div class="input-group input-group-outline mb-3">
+                      <label class="form-label">Confirmar Senha</label>                      
+					  <input type="password" class="form-control" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword">
+                    </div>
+                    <div class="form-check form-check-info text-start ps-0">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Eu concordo com o <a href="javascript:;" class="text-dark font-weight-bolder">Termos e Condições</a>
+                      </label>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Confirmar cadastro</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                  <p class="mb-2 text-sm mx-auto">
+                    Já tem uma conta?
+                    <a href="#" class="text-primary text-gradient font-weight-bold" (click)="onRegisterClick($event)">					
+					   Entrar
+					</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main> 
+  
+  <!-- MODAL Notificação-->
+  <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title font-weight-normal" id="modal-title-notification">Atenção!</h6>
+          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="py-3 text-center">            
+            <h4 class="text-gradient text-danger mt-4">Informações inválidas!</h4>
+            <p>{{ errorMessage }}</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
